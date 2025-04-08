@@ -1,0 +1,257 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #f8f9fa;
+}
+
+/* App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+}
+
+.nav-tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: #f1f3f5;
+    transform: translateX(4px);
+}
+
+.nav-btn.active {
+    background: #007bff;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.2);
+}
+
+.emoji {
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: #f8f9fa;
+    overflow-y: auto;
+}
+
+.content-title {
+    color: #212529;
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+/* Tabs Content */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Settings Button */
+.settings-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    margin-top: auto;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #007bff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.settings-btn:hover {
+    background: #f1f3f5;
+}
+
+/* About Section */
+.about-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.version-info {
+    font-size: 16px;
+    color: #343a40;
+}
+
+.version-info span {
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 18px;
+    color: #212529;
+}
+
+.project-version {
+    font-size: 12px;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.project-details p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+/* Versions List */
+.versions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.version-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #007bff;
+}
+
+.version-card.beta {
+    border-color: #ffc107;
+}
+
+.version-card.patch {
+    border-color: #28a745;
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.version-title {
+    font-size: 16px;
+    color: #212529;
+}
+
+.version-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    background: #007bff;
+    color: white;
+}
+
+.beta .version-badge {
+    background: #ffc107;
+}
+
+.patch .version-badge {
+    background: #28a745;
+}
+
+.changes-list {
+    padding-left: 20px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.changes-list li {
+    margin: 6px 0;
+}
+
+.release-date {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}

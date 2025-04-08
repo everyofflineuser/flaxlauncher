@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flax Engine Launcher</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav class="nav-tabs">
+                <button class="nav-btn active" data-tab="projects">
+                    <span class="emoji">🚀</span> Проекты
+                </button>
+                <button class="nav-btn" data-tab="versions">
+                    <span class="emoji">📦</span> Версии
+                </button>
+                <button class="nav-btn" data-tab="about">
+                    <span class="emoji">ℹ️</span> О приложении
+                </button>
+            </nav>
+            <button class="settings-btn">
+                <span class="emoji">⚙️</span> Настройки
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="projects" class="tab-content active">
+                <h1 class="content-title">Мои проекты</h1>
+                <div class="projects-grid"></div>
+            </div>
+            
+            <div id="versions" class="tab-content">
+                <h1 class="content-title">Версии движка</h1>
+                <div class="versions-list"></div>
+            </div>
+            
+            <div id="about" class="tab-content">
+                <h1>О приложении</h1>
+                <div class="about-content">
+                    <p>Версия: <span id="app-version"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/renderer.js"></script>
+</body>
+</html>

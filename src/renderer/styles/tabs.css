@@ -1,0 +1,31 @@
+.sidebar {
+    width: 280px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e9ecef;
+    padding: 20px 0;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,123,255,0.2);
+}
